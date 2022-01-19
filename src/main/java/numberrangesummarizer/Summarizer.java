@@ -91,7 +91,7 @@ public class Summarizer implements NumberRangeSummarizer {
 			int current = numbers[i];
 
 			// Catch non-sequential values
-			if (distance(current, prev) > 1) {
+			if (current != prev + 1) {
 
 				// Close ranges
 				if (ranging)
@@ -112,16 +112,6 @@ public class Summarizer implements NumberRangeSummarizer {
 			out += "-" + prev;
 
 		return out;
-	}
-
-	/**
-	 * Returns the absolute distance between two integers
-	 * @param a	First point to compare.
-	 * @param b	Second point to compare.
-	 * @return	Distance between a and b.
-	 */
-	private int distance(int a, int b) {
-		return Math.abs(a - b);
 	}
 
 }
