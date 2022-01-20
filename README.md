@@ -4,9 +4,15 @@ This is my submission for the Impact Junior Software Engineer take home test.
 
 ## Getting Started
 
+Change directory to the project root before attempting the following.
+
 Unit tests can be run by using `mvn test`.
 
-I have **not** included an app that can be used to play with Summarizer (didn't seem relevant to spec), but wouldn't mind doing so upon request.
+The Sandbox, which will allow you to enter user input and see the resulting summary, can be accessed by using 
+
+```
+mvn clean package install exec:java
+```
 
 ## Number Range Summarizer
 
@@ -59,6 +65,16 @@ summarizeCollection returns
 ```
 
 We assume the input format is correct, but summarizeCollection will sort and remove duplicates.
+
+## Sandbox
+
+The Sandbox is a simple user interface that enables interaction with the Summarizer. Details on running the sandbox have been provided in the *Getting Started* section of this readme.
+
+The Sandbox can take Terminal or Argument input and can also perform a demo on default values. The input mode can be changed by editing the MODE constant in Sandbox.java
+
+The Sandbox output can also be limited by disabling the VERBOSE flag in Sandbox.java
+
+Please note that the Sandbox has not been fully tested, it is just a bonus feature.
 
 ## Fin
 
